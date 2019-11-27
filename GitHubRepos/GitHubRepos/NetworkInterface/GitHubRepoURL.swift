@@ -28,7 +28,6 @@ struct GitHubRepoUrl {
     private var baseURL: String {
         return "https://api.github.com/search/repositories"
     }
-    
     // Path
     init(path: Path) {
         self.path = path

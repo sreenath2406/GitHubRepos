@@ -9,7 +9,6 @@
 import UIKit
 
 class TrendingReposViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
