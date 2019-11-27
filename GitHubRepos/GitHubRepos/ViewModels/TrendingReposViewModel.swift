@@ -19,8 +19,8 @@ struct RepoViewData {
 
 class TrendingReposViewModel {
     // Variables holding the data
+    var repoItems: [RepoItem] = []
     private var repoModel: ReposModel?
-    private var repoItems: [RepoItem] = []
     private var moreItemsAvailable: Bool = true
     private var currentPage: Int = 0
 
