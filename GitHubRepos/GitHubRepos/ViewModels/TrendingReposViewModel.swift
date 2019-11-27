@@ -22,7 +22,7 @@ class TrendingReposViewModel {
     private var repoModel: ReposModel?
     private var repoItems: [RepoItem] = []
     private var moreItemsAvailable: Bool = true
-    private var currentPage: Int = 1
+    private var currentPage: Int = 0
 
     // MARK: - Get Repo's list based on the Page number
     func getReposInformation(for pageNumber: Int, completionCallBack: @escaping(Bool, String?) -> Void) {
@@ -34,6 +34,7 @@ class TrendingReposViewModel {
                     return
                 }
             }
+            self.moreItemsAvailable = false
             completionCallBack(false, error?.localizedDescription)
         }
     }

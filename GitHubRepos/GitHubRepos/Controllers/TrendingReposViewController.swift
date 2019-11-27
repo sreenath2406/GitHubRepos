@@ -15,6 +15,7 @@ class TrendingReposViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.showLoadingView()
         self.title = TrendingReposViewController.pageTitle
         registerTableViewCells()
         fetchReposInfo()
@@ -22,17 +23,19 @@ class TrendingReposViewController: UIViewController {
 
     // MARK: Fetch Repo's Data from Server
     private func fetchReposInfo() {
-        self.showLoadingView()
-        self.trendingReposVM.getReposInformation(for:
-        self.trendingReposVM.getCurrentPage()) {(isSuccess, error) in
+        let currentPage = self.trendingReposVM.getCurrentPage()
+        self.trendingReposVM.getReposInformation(for: currentPage + 1) {(isSuccess, error) in
             self.hideLoadingView()
             if isSuccess {
                 // Reload TableView
+                self.trendingReposVM.setCurentPage(pageNumber: currentPage + 1)
                 self.reposTableView.reloadData()
             } else {
                 // Show Error Dialog
                 self.showErrorDialog(with: TrendingReposViewController.errorTitle,
                                      message: error ?? TrendingReposViewController.errorMessage)
+                // Hide TableView footer
+                self.reposTableView.tableFooterView?.isHidden = true
             }
         }
     }
@@ -65,6 +68,17 @@ extension TrendingReposViewController: UITableViewDataSource, UITableViewDelegat
         //Set the Data to UI
         cell.setRepoData(repoData: self.trendingReposVM.getRepoItem(at: indexPath.row))
         return cell
+    }
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let lastIndexPath = self.trendingReposVM.getRepoItemsCount() - 1
+        if indexPath.row == lastIndexPath && self.trendingReposVM.areMoreItemsAvailable() {
+            let loadingView = UIActivityIndicatorView(style: .medium)
+            loadingView.startAnimating()
+            loadingView.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 44)
+            self.reposTableView.tableFooterView = loadingView
+            self.reposTableView.tableFooterView?.isHidden = false
+            self.fetchReposInfo()
+        }
     }
 }
 

@@ -15,6 +15,7 @@
 		0E81961D238E39CA00B98A45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E81961B238E39CA00B98A45 /* LaunchScreen.storyboard */; };
 		0E819628238E39CA00B98A45 /* GitHubReposTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E819627238E39CA00B98A45 /* GitHubReposTests.swift */; };
 		0E819633238E39CA00B98A45 /* GitHubReposUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E819632238E39CA00B98A45 /* GitHubReposUITests.swift */; };
+		0E819641238E7FA000B98A45 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E819640238E7FA000B98A45 /* ErrorModel.swift */; };
 		0EE55641238E48100052A1F1 /* ReposModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE55640238E48100052A1F1 /* ReposModel.swift */; };
 		0EE55643238E4C8D0052A1F1 /* RepoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE55642238E4C8D0052A1F1 /* RepoItem.swift */; };
 		0EE55645238E4CCE0052A1F1 /* RepoOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE55644238E4CCE0052A1F1 /* RepoOwner.swift */; };
@@ -62,6 +63,7 @@
 		0E81962E238E39CA00B98A45 /* GitHubReposUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubReposUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E819632238E39CA00B98A45 /* GitHubReposUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubReposUITests.swift; sourceTree = "<group>"; };
 		0E819634238E39CA00B98A45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E819640238E7FA000B98A45 /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
 		0EE55640238E48100052A1F1 /* ReposModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposModel.swift; sourceTree = "<group>"; };
 		0EE55642238E4C8D0052A1F1 /* RepoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoItem.swift; sourceTree = "<group>"; };
 		0EE55644238E4CCE0052A1F1 /* RepoOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoOwner.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				0EE55640238E48100052A1F1 /* ReposModel.swift */,
 				0EE55642238E4C8D0052A1F1 /* RepoItem.swift */,
 				0EE55644238E4CCE0052A1F1 /* RepoOwner.swift */,
+				0E819640238E7FA000B98A45 /* ErrorModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 				0EE5564A238E50E50052A1F1 /* GitHubRepoURL.swift in Sources */,
 				0EE55641238E48100052A1F1 /* ReposModel.swift in Sources */,
 				0EE55643238E4C8D0052A1F1 /* RepoItem.swift in Sources */,
+				0E819641238E7FA000B98A45 /* ErrorModel.swift in Sources */,
 				0EE55658238E71EB0052A1F1 /* UIViewController+Extensions.swift in Sources */,
 				0EE5564D238E5D170052A1F1 /* TrendingReposViewModel.swift in Sources */,
 				0EE55645238E4CCE0052A1F1 /* RepoOwner.swift in Sources */,
