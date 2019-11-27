@@ -24,10 +24,11 @@ class TrendingReposCell: UITableViewCell {
 
     // MARK: - View IDentifiers
     private func setViewIdentifiers() {
-        self.repoName.accessibilityIdentifier = "Repository Name"
-        self.repoDescription.accessibilityIdentifier = "Repository Description"
-        self.repoUserName.accessibilityIdentifier = "Repository Username"
-        self.repoStars.accessibilityIdentifier = "Repository Stars"
+        self.accessibilityIdentifier = StaticString.tableViewCellIdentifier
+        self.repoName.accessibilityIdentifier = StaticString.repositoryNameIdentifier
+        self.repoDescription.accessibilityIdentifier = StaticString.repositoryDescIdentifier
+        self.repoUserName.accessibilityIdentifier = StaticString.repositoryUserNameIdentifier
+        self.repoStars.accessibilityIdentifier = StaticString.repositoryStarsIdentifier
     }
     // MARK: - Set the Repo Data to row.
     public func setRepoData(repoData: RepoViewData) {

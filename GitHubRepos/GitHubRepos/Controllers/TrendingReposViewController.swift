@@ -16,7 +16,7 @@ class TrendingReposViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.showLoadingView()
-        self.title = TrendingReposViewController.pageTitle
+        self.title = StaticString.pageTitle
         registerTableViewCells()
         fetchReposInfo()
     }
@@ -32,8 +32,8 @@ class TrendingReposViewController: UIViewController {
                 self.reposTableView.reloadData()
             } else {
                 // Show Error Dialog
-                self.showErrorDialog(with: TrendingReposViewController.errorTitle,
-                                     message: error ?? TrendingReposViewController.errorMessage)
+                self.showErrorDialog(with: StaticString.errorTitle,
+                                     message: error ?? StaticString.errorMessage)
                 // Hide TableView footer
                 self.reposTableView.tableFooterView?.isHidden = true
             }
@@ -42,11 +42,11 @@ class TrendingReposViewController: UIViewController {
     // MARK: Register TableView Cells
     private func registerTableViewCells() {
         self.reposTableView.register(UINib(nibName: "TrendingReposCell", bundle: .main),
-                                     forCellReuseIdentifier: TrendingReposViewController.reposCellIdentifier)
+                                     forCellReuseIdentifier: StaticString.reposCellIdentifier)
         self.reposTableView.dataSource = self
         self.reposTableView.delegate = self
         self.reposTableView.tableFooterView = UIView()
-        self.reposTableView.accessibilityIdentifier = TrendingReposViewController.tableViewIdentifier
+        self.reposTableView.accessibilityIdentifier = StaticString.tableViewIdentifier
     }
 }
 
@@ -61,7 +61,7 @@ extension TrendingReposViewController: UITableViewDataSource, UITableViewDelegat
         return self.trendingReposVM.getRepoItemsCount()
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: TrendingReposViewController.reposCellIdentifier)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: StaticString.reposCellIdentifier)
             as? TrendingReposCell else {
                 return UITableViewCell()
         }
@@ -80,15 +80,4 @@ extension TrendingReposViewController: UITableViewDataSource, UITableViewDelegat
             self.fetchReposInfo()
         }
     }
-}
-
-/*
- TrendingReposViewController extension for Static Strings
- */
-extension TrendingReposViewController {
-    static let pageTitle = "Trending Repos"
-    static let reposCellIdentifier = "TrendingReposCell"
-    static let errorTitle = "Error"
-    static let errorMessage = "Unable to fetch the repo's list"
-    static let tableViewIdentifier = "TrendingReposTableView"
 }
