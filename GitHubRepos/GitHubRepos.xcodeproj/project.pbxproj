@@ -116,12 +116,12 @@
 		0E81960F238E39C700B98A45 /* GitHubRepos */ = {
 			isa = PBXGroup;
 			children = (
-				0E819610238E39C700B98A45 /* AppDelegate.swift */,
+				0EE5563E238E457F0052A1F1 /* AppDelegate */,
+				0EE5563D238E45760052A1F1 /* Views */,
+				0EE5563C238E45340052A1F1 /* ViewModels */,
+				0EE5563B238E452D0052A1F1 /* Models */,
 				0E819612238E39C700B98A45 /* SceneDelegate.swift */,
-				0E819614238E39C700B98A45 /* ViewController.swift */,
-				0E819616238E39C700B98A45 /* Main.storyboard */,
 				0E819619238E39CA00B98A45 /* Assets.xcassets */,
-				0E81961B238E39CA00B98A45 /* LaunchScreen.storyboard */,
 				0E81961E238E39CA00B98A45 /* Info.plist */,
 			);
 			path = GitHubRepos;
@@ -143,6 +143,46 @@
 				0E819634238E39CA00B98A45 /* Info.plist */,
 			);
 			path = GitHubReposUITests;
+			sourceTree = "<group>";
+		};
+		0EE5563B238E452D0052A1F1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0EE5563C238E45340052A1F1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				0E819614238E39C700B98A45 /* ViewController.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0EE5563D238E45760052A1F1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0EE5563F238E458A0052A1F1 /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0EE5563E238E457F0052A1F1 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				0E819610238E39C700B98A45 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		0EE5563F238E458A0052A1F1 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0E81961B238E39CA00B98A45 /* LaunchScreen.storyboard */,
+				0E819616238E39C700B98A45 /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		97225BD75108DF470115618E /* Pods */ = {
