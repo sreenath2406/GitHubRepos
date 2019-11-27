@@ -14,10 +14,10 @@ struct StaticString {
     static let errorTitle = "Error"
     static let errorMessage = "Unable to fetch the repo's list"
     static let tableViewIdentifier = "TrendingReposTableView"
-    static let tableViewCellIdentifier = "Trending Repos"
+    static let tableViewCellIdentifier = "tableVoiew_trendingrepos"
     // TableViewCell Items
-    static let repositoryNameIdentifier = "Repository Name"
-    static let repositoryDescIdentifier = "Repository Description"
-    static let repositoryUserNameIdentifier = "Repository Username"
-    static let repositoryStarsIdentifier = "Repository Stars"
+    static let repositoryNameIdentifier = "label_repository_name"
+    static let repositoryDescIdentifier = "label_repository_description"
+    static let repositoryUserNameIdentifier = "label_repository_username"
+    static let repositoryStarsIdentifier = "label_repository_stars"
 }

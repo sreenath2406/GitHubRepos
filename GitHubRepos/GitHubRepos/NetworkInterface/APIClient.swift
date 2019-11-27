@@ -24,7 +24,7 @@ class APIClient {
                         do {
                             // Check if we received any limit reached message
                             if let jsonData = try JSONSerialization.jsonObject(with: responseObject.data!,
-                                                                               options: .allowFragments) as? [String: Any] {
+                                                                options: .allowFragments) as? [String: Any] {
                                 if let errorMessage = jsonData["message"] as? String {
                                     let error = NSError(domain: "",
                                                         code: 500,
