@@ -19,6 +19,7 @@ class TrendingReposCell: UITableViewCell {
         super.awakeFromNib()
         self.selectionStyle = .none
         setViewIdentifiers()
+        self.repoUserAvatar.makeRoundedView()
     }
 
     // MARK: - View IDentifiers
