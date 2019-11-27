@@ -9,6 +9,7 @@ target 'GitHubRepos' do
   pod 'Alamofire', '5.0.0-rc.3'
   pod 'Cosmos', '~> 19.0'
   pod 'SwiftLint'
+  pod 'Kingfisher', '~> 5.10'
   target 'GitHubReposTests' do
     inherit! :search_paths
     # Pods for testing

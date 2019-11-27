@@ -8,13 +8,13 @@
 
 import Foundation
 
-// View Object to set in UI
+// Final View Object to set in UI
 struct RepoViewData {
     let repoName: String
     let repoDescription: String
     let starsCount: Int
     let userName: String
-    let aavatarURL: String
+    let avatarURL: String
 }
 
 class TrendingReposViewModel {
@@ -30,10 +30,11 @@ class TrendingReposViewModel {
             if isSuccess {
                 if let dataItems = modelData?.repoItems {
                     self.repoItems.append(contentsOf: dataItems)
+                    completionCallBack(true, nil)
+                    return
                 }
-            } else {
-                completionCallBack(false, error?.localizedDescription ?? "Unable to fetch the repo's list")
             }
+            completionCallBack(false, error?.localizedDescription)
         }
     }
 
@@ -57,6 +58,11 @@ class TrendingReposViewModel {
         self.moreItemsAvailable = moreItemsAvailable
     }
 
+    // MARK: - Get Number of sections for tableview
+    func getSectionsCount() -> Int {
+        return 1
+    }
+
     // MARK: - Get number of Items available
     func getRepoItemsCount() -> Int {
         return repoItems.count
@@ -68,6 +74,6 @@ class TrendingReposViewModel {
                      repoDescription: self.repoItems[position].repoDescription ?? "",
                      starsCount: self.repoItems[position].starsCount ?? 0,
                      userName: self.repoItems[position].ownerDetails?.userName ?? "",
-                     aavatarURL: self.repoItems[position].ownerDetails?.avatarURL ?? "" )
+                     avatarURL: self.repoItems[position].ownerDetails?.avatarURL ?? "" )
     }
 }

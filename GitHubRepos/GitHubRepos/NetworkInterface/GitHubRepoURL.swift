@@ -17,7 +17,7 @@ struct GitHubRepoUrl {
         fileprivate var components: String {
             switch self {
             case let .getRepos(page):
-                return "?q=created:%3E2017-10-22&sort=stars&order=desc&page=\(page)"
+                return "repositories?q=created:%3E2017-10-22&sort=stars&order=desc&page=\(page)"
             }
         }
     }
@@ -26,7 +26,7 @@ struct GitHubRepoUrl {
 
     // Base URL
     private var baseURL: String {
-        return "https://api.github.com/search/repositories"
+        return "api.github.com/search"
     }
     // Path
     init(path: Path) {
