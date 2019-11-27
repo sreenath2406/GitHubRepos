@@ -12,14 +12,14 @@ struct RepoItem: Codable {
     let repoDescription: String?
     let starsCount: Int?
     let ownerDetails: RepoOwner?
-    
+
     enum CodingKeys: String, CodingKey {
         case repoName = "name"
         case repoDescription = "description"
         case starsCount = "watchers_count"
         case ownerDetails = "owner"
     }
-    
+
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         repoName = try values.decodeIfPresent(String.self, forKey: .repoName)

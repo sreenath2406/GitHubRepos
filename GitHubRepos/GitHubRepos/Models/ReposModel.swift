@@ -11,13 +11,11 @@ struct ReposModel: Codable {
     let totalCount: Int
     let incompleteResults: Bool
     let repoItems: [RepoItem]
-    
     enum CodingKeys: String, CodingKey {
         case totalCount = "total_count"
         case incompleteResults = "incomplete_results"
         case repoItems = "items"
     }
-    
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         totalCount = try values.decode(Int.self, forKey: .totalCount)

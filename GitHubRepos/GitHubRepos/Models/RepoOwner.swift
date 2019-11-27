@@ -11,12 +11,12 @@ import Foundation
 struct RepoOwner: Codable {
     let userName: String?
     let avatarURL: String?
-    
+
     enum CodingKeys: String, CodingKey {
         case userName = "login"
         case avatarURL = "avatar_url"
     }
-    
+
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         userName = try values.decodeIfPresent(String.self, forKey: .userName)
