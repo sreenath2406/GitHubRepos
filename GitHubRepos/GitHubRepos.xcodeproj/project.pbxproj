@@ -357,6 +357,7 @@
 				0E81961F238E39CA00B98A45 /* Sources */,
 				0E819620238E39CA00B98A45 /* Frameworks */,
 				0E819621238E39CA00B98A45 /* Resources */,
+				3BC36BE2B2E9DC2294FC83FA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -564,6 +565,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3BC36BE2B2E9DC2294FC83FA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GitHubReposTests/Pods-GitHubReposTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GitHubReposTests/Pods-GitHubReposTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GitHubReposTests/Pods-GitHubReposTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		481159A4B8C2A081F011D189 /* [CP] Embed Pods Frameworks */ = {
@@ -801,6 +819,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F4B5D21900F62A97921B8B78 /* Pods-GitHubRepos.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GitHubRepos/Info.plist;
@@ -819,6 +838,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 44DAD7A846B634FD6FBB2C92 /* Pods-GitHubRepos.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GitHubRepos/Info.plist;
@@ -837,7 +857,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F4C501E94E253316B9C704D0 /* Pods-GitHubReposTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GitHubReposTests/Info.plist;
@@ -859,7 +879,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FAFF7601D64951508B4F9897 /* Pods-GitHubReposTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GitHubReposTests/Info.plist;
@@ -881,7 +901,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 091A09BCE232501964D56983 /* Pods-GitHubRepos-GitHubReposUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GitHubReposUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -901,7 +921,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B38D9604A09AF04F4D1F2731 /* Pods-GitHubRepos-GitHubReposUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GitHubReposUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

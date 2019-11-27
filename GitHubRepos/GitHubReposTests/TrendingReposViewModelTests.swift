@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import Alamofire
 
 class TrendingReposViewModelTests: XCTestCase {
 
@@ -29,6 +30,39 @@ class TrendingReposViewModelTests: XCTestCase {
 
     override func tearDown() {
     }
+
+    func testTrendingReposViewModelAPIRequest() {
+       // Given Data
+        let reqURL = "https://api.github.com/search/repositories?q=created:%3E2017-10-22&sort=stars&order=desc&page=1"
+        let requestExpectation = self.expectation(description: "Alamofire")
+
+        //When
+        let request = AF.request(reqURL).response { _ in
+            requestExpectation.fulfill()
+        }
+        waitForExpectations(timeout: 10.0, handler: nil)
+
+        // Then
+        XCTAssertNotNil(request.request)
+        XCTAssertEqual(request.request?.httpMethod, "GET")
+        XCTAssertEqual(request.request?.url?.absoluteString, reqURL)
+        XCTAssertNotNil(request.response)
+    }
+
+//    func testLoginApiResponse() {
+//        let e = expectation(description: "Alamofire")
+//        vc.callLoginApiForLogin { (isFinished: Bool) in
+//            if isFinished {
+//                debugPrint("Finished in unit test!!!")
+//                debugPrint("----> Unit Test Login Data \(self.vc.loginModal.userDetail?.firstName ?? "")")
+//                let resultString = self.vc.loginModal.userDetail?.firstName ?? ""
+//                let expectedString = "qa"
+//                XCTAssertEqual(resultString, expectedString)
+//            }
+//            e.fulfill()
+//        }
+//        waitForExpectations(timeout: 5.0, handler: nil)
+//    }
 
     func testGetCurrentPageMethod() {
         mockTrendingReposViewModel.setCurentPage(pageNumber: 1)
