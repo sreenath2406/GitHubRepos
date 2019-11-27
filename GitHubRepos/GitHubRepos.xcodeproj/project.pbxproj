@@ -15,6 +15,9 @@
 		0E81961D238E39CA00B98A45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E81961B238E39CA00B98A45 /* LaunchScreen.storyboard */; };
 		0E819628238E39CA00B98A45 /* GitHubReposTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E819627238E39CA00B98A45 /* GitHubReposTests.swift */; };
 		0E819633238E39CA00B98A45 /* GitHubReposUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E819632238E39CA00B98A45 /* GitHubReposUITests.swift */; };
+		0EE55641238E48100052A1F1 /* ReposModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE55640238E48100052A1F1 /* ReposModel.swift */; };
+		0EE55643238E4C8D0052A1F1 /* RepoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE55642238E4C8D0052A1F1 /* RepoItem.swift */; };
+		0EE55645238E4CCE0052A1F1 /* RepoOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE55644238E4CCE0052A1F1 /* RepoOwner.swift */; };
 		0F9557A79698AA97909E2274 /* Pods_GitHubReposTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2512EB343DE6E3C290EFC4A /* Pods_GitHubReposTests.framework */; };
 		6E1C3154FB8A8BEF8FEFBB2B /* Pods_GitHubRepos_GitHubReposUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC5132B9841D075755971093 /* Pods_GitHubRepos_GitHubReposUITests.framework */; };
 		D2E8A8976AA13CD781EC37FB /* Pods_GitHubRepos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEC86875671EF7469CE63A65 /* Pods_GitHubRepos.framework */; };
@@ -53,6 +56,9 @@
 		0E81962E238E39CA00B98A45 /* GitHubReposUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubReposUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E819632238E39CA00B98A45 /* GitHubReposUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubReposUITests.swift; sourceTree = "<group>"; };
 		0E819634238E39CA00B98A45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EE55640238E48100052A1F1 /* ReposModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposModel.swift; sourceTree = "<group>"; };
+		0EE55642238E4C8D0052A1F1 /* RepoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoItem.swift; sourceTree = "<group>"; };
+		0EE55644238E4CCE0052A1F1 /* RepoOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoOwner.swift; sourceTree = "<group>"; };
 		44DAD7A846B634FD6FBB2C92 /* Pods-GitHubRepos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubRepos.release.xcconfig"; path = "Target Support Files/Pods-GitHubRepos/Pods-GitHubRepos.release.xcconfig"; sourceTree = "<group>"; };
 		A2512EB343DE6E3C290EFC4A /* Pods_GitHubReposTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubReposTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38D9604A09AF04F4D1F2731 /* Pods-GitHubRepos-GitHubReposUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubRepos-GitHubReposUITests.release.xcconfig"; path = "Target Support Files/Pods-GitHubRepos-GitHubReposUITests/Pods-GitHubRepos-GitHubReposUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +154,9 @@
 		0EE5563B238E452D0052A1F1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0EE55640238E48100052A1F1 /* ReposModel.swift */,
+				0EE55642238E4C8D0052A1F1 /* RepoItem.swift */,
+				0EE55644238E4CCE0052A1F1 /* RepoOwner.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -467,6 +476,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E819615238E39C700B98A45 /* ViewController.swift in Sources */,
+				0EE55641238E48100052A1F1 /* ReposModel.swift in Sources */,
+				0EE55643238E4C8D0052A1F1 /* RepoItem.swift in Sources */,
+				0EE55645238E4CCE0052A1F1 /* RepoOwner.swift in Sources */,
 				0E819611238E39C700B98A45 /* AppDelegate.swift in Sources */,
 				0E819613238E39C700B98A45 /* SceneDelegate.swift in Sources */,
 			);
