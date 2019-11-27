@@ -22,8 +22,10 @@ class TrendingReposViewController: UIViewController {
 
     // MARK: Fetch Repo's Data from Server
     private func fetchReposInfo() {
+        self.showLoadingView()
         self.trendingReposVM.getReposInformation(for:
         self.trendingReposVM.getCurrentPage()) {(isSuccess, error) in
+            self.hideLoadingView()
             if isSuccess {
                 // Reload TableView
                 self.reposTableView.reloadData()
@@ -40,7 +42,7 @@ class TrendingReposViewController: UIViewController {
                                      forCellReuseIdentifier: TrendingReposViewController.reposCellIdentifier)
         self.reposTableView.dataSource = self
         self.reposTableView.delegate = self
-        self.reposTableView.tableFooterView = nil
+        self.reposTableView.tableFooterView = UIView()
         self.reposTableView.accessibilityIdentifier = TrendingReposViewController.tableViewIdentifier
     }
 }
